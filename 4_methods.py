@@ -1,3 +1,47 @@
+# # instance method
+
+# class Car:
+
+#     wheels = 4
+
+#     def __init__(self, brand, color):
+#         self.brand = brand
+#         self.color = color
+    
+#     def show_details(self):
+#         print(f'Car brand - {self.brand}, color - {self.color}, wheels - {self.wheels}')
+
+# car1 = Car('BMW', 'Blue')
+# car1.show_details()
+
+
+
+# # class method
+
+# class Car:
+
+#     wheels = 4
+
+#     def __init__(self, brand, color):
+#         self.brand = brand
+#         self.color = color
+    
+#     def show_details(self):
+#         print(f'Car brand - {self.brand}, color - {self.color}, wheels - {self.wheels}')
+
+#     @classmethod
+#     def show_wheels(cls):
+#         print(f'wheels - {cls.wheels}, brand - {cls.brand}')
+
+# car1 = Car('BMW', 'Blue')
+# car1.show_details()
+# car1.show_wheels()
+
+
+
+
+# static method
+
 class Car:
 
     wheels = 4
@@ -6,23 +50,18 @@ class Car:
         self.brand = brand
         self.color = color
     
-    # instance method
     def show_details(self):
-        print(f"Brand - {self.brand}, color - {self.color}, wheels - {self.wheels}")
+        print(f'Car brand - {self.brand}, color - {self.color}, wheels - {self.wheels}')
 
-    # class method
     @classmethod
-    def show_wheel_count(cls):
-        print(f'Wheel count - {cls.wheels}')
+    def show_wheels(cls):
+        print(f'wheels - {cls.wheels}')
 
-    # static method
     @staticmethod
-    def say_my_brand(brand):
-        print(f'brand is {brand}')
+    def drive():
+        print('Drive.....')
 
-
-# car1 = Car('BMW', 'blue')
-# car1.show_details()
-# car1.show_wheel_count()
-
-Car.say_my_brand("Toyota")
+car1 = Car('BMW', 'Blue')
+car1.show_details()
+car1.show_wheels()
+Car.drive()
